@@ -5,11 +5,6 @@
 
 {% block contenido %}
 
-
-    {% for n in libro %}
-        <p>{{n.nombre}}</p>
-    {% endfor %}
-
     <table class="table">
         <thead>
           <tr>
@@ -19,7 +14,7 @@
           </tr>
         </thead>
         <tbody>
-            {% for n in libro %}
+            {% for n in lecturas %}
             <tr>
                 <th scope="row">{{n.id}}</th>
                 <td>{{n.nombre}}</td>

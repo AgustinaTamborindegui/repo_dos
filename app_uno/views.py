@@ -10,12 +10,15 @@ def index(request):
     return render( request , "index.html" )
 
 def lecturas (request): 
-    
-    return render (request, "lecturas.html")
+    lista_libros = Libro.objects.all()
+    libros = lista_libros
+    return render (request, "lecturas.html", {"libros":libros })
 
 def peliculas (request): 
+    lista_peliculas = Pelicula.objects.all()
+    peliculas = lista_peliculas
     
-    return render (request, "peliculas.html")
+    return render (request, "peliculas.html", {"peliculas": peliculas})
 
 def post (request): 
     
