@@ -5,10 +5,30 @@
 
 {% block contenido %}
 
-<main>
 
+    {% for n in pelicula %}
+        <p>{{n.nombre}}</p>
+    {% endfor %}
 
-</main>
-
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Estreno</th>           
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in pelicula %}
+            <tr>
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.nombre}}</td>
+                <td>{{n.año_estreno}}</td>
+                
+            </tr>
+            {% endfor %}        
+        
+        </tbody>
+      </table>
 
 {% endblock %}
